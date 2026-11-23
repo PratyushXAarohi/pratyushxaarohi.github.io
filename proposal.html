@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pratyush's Proposal to Aarohi</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 32px 24px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .proposal-img {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.6);
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      position: relative;
+    }
+
+    button {
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .yes-btn {
+      background-color: #ffffff;
+      color: #ff4b72;
+    }
+
+    .yes-btn:hover {
+      transform: scale(1.08);
+    }
+
+    .no-btn {
+      background-color: #ff4b72;
+      color: #ffffff;
+    }
+
+    #response {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      min-height: 28px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #fff;
+      text-decoration: underline;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Pratyush's Proposal to Aarohi</h1>
+    <img src="4.jpg" alt="Pratyush's Proposal to Aarohi" class="proposal-img" />
+    <p>
+      Dear Aarohi, from the very first day in class, you've been the only one on my mind.
+      Will you be mine forever?
+    </p>
+
+    <div class="btn-group">
+      <button class="yes-btn" onclick="sayYes()">Yes</button>
+      <button class="no-btn" id="noBtn" onmouseover="moveNo()" onclick="moveNo()">No</button>
+    </div>
+
+    <div id="response"></div>
+    <a href="index.html" class="back-link">Back to Home</a>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.getElementById("response").innerText = "She said YES! Pratyush x Aarohi Forever!";
+    }
+
+    function moveNo() {
+      const btn = document.getElementById("noBtn");
+      const x = Math.floor(Math.random() * 180) - 90;
+      const y = Math.floor(Math.random() * 120) - 60;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+  </script>
+</body>
+</html>
